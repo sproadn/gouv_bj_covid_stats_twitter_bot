@@ -10,7 +10,8 @@ import tweepy as tp
 import time
 import logging
 
-logger = logging.getLogger()
+logging.basicConfig(level=logging.INFO, filename="bot_log.txt",
+                    format='%(asctime)s :: %(levelname)s :: %(message)s')
 config = dict(dotenv_values(".env"))
 
 # Connect to twitter api
@@ -26,4 +27,8 @@ with open('message.txt', 'r') as message_file:
 
 # update twitter status
 if (status_message != old_message):
+    logging.info("Updating status")
     api.update_status(status_message)
+    logging.info("End updating status")
+else:
+    logging.error("Duplicate status")
