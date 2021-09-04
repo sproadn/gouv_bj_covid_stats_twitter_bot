@@ -1,7 +1,0 @@
-Cas confirmés	: 15932
-Sous traitement	: 4703
-Cas guéris	: 11098
-Décès	: 131
-Source: https://gouv.bj/coronavirus 
-
-Prenez soins de vous et respectez les gestes barrières.

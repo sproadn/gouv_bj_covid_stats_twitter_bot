@@ -29,7 +29,4 @@ def get_gouv_bj_covid_stats():
 
 	message = cas_confirme + sous_traitement + cas_gueris + deces + source + conseil
 
-	with open('message.txt', 'w') as message_file:
-		message_file.write(message)
-
 	return message
