@@ -21,6 +21,9 @@ delta = last_day_of_year - today
 
 message = f"Il reste {delta.days} jours avant la fin de l'année."
 
+if (delta.days == 0):
+    message = "C'est le dernier jour de l'année"
+
 try:
     logging.info("Updating status")
     api.update_status(message)
